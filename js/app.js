@@ -1,4 +1,4 @@
-module.exports = new Promise((resolve, request) => {
+
 var song_uri = ['7qiZfU4dY1lWllzX7mPBI3', '17cy40GIhqCU5aQzlSI5EX', '6AeQlMyRzvSl1nkFztZyKl']
 
 var request = require('request');
@@ -26,11 +26,7 @@ var response = request({
     
         json_list.push({title:titleJson, url: parsedJson});
  
-//        console.log(json_list);
-        if (json_list.length == song_uri.length ) {
-            resolve(json_list);
-            console.log(json_list);
-        }
+        console.log(json_list);
 //    console.log('parsedJson: ', parsedJson);
     
     });
@@ -42,4 +38,3 @@ var response = request({
 
 console.log(json_list);
 console.log(i);
-});
